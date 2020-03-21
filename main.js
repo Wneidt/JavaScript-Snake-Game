@@ -16,6 +16,7 @@ function Snake() {
       ctx.fillRect(this.x, this.y, scale, scale);
     }
   
+    
     this.update = function() {
       for (let i=0; i<this.tail.length - 1; i++) {
         this.tail[i] = this.tail[i+1];
@@ -65,6 +66,7 @@ function Snake() {
       }
     }
   
+    
     this.eat = function(fruit) {
       if (this.x === fruit.x &&
         this.y === fruit.y) {
@@ -75,6 +77,7 @@ function Snake() {
       return false;
     }
   
+    
     this.checkCollision = function() {
       for (var i=0; i<this.tail.length; i++) {
         if (this.x === this.tail[i].x &&
